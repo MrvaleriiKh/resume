@@ -1,0 +1,640 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Резюме | Валерій Хасанов</title>
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- FontAwesome для іконок -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <!-- Credly Embed Script -->
+    <script type="text/javascript" async src="//cdn.credly.com/assets/utilities/embed.js"></script>
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            transition: all 0.3s ease;
+        }
+        .gradient-text {
+            background: linear-gradient(135deg, #1e3a8a, #2563eb, #3b82f6);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        .glass-card {
+            background: rgba(255, 255, 255, 0.9);
+            backdrop-filter: blur(12px);
+            border: 1px solid rgba(229, 231, 235, 0.8);
+        }
+        .mobile-simulated {
+            max-width: 414px !important;
+            margin: 2rem auto !important;
+            border: 12px solid #1e293b;
+            border-radius: 40px;
+            box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+            overflow-x: hidden;
+        }
+        @media print {
+            nav, .no-print { display: none !important; }
+            body { background: white; color: black; }
+            .py-16, .pt-28 { padding-top: 1rem !important; padding-bottom: 1rem !important; }
+        }
+        .google-badge-card {
+            width: 150px;
+            height: 270px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            text-decoration: none;
+        }
+    </style>
+</head>
+<body id="main-body" class="bg-slate-50 text-slate-800 antialiased selection:bg-blue-600 selection:text-white">
+
+    <!-- Навігація -->
+    <nav class="fixed top-0 left-0 w-full z-50 bg-white/90 backdrop-blur-md border-b border-slate-200">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between h-16 items-center">
+                <a href="#" class="font-bold text-xl tracking-tight text-slate-900" data-i18n="nameLogo">Валерій <span class="text-blue-600">Хасанов</span></a>
+                
+                <div class="hidden md:flex space-x-8 text-sm font-medium">
+                    <a href="#about" class="text-slate-600 hover:text-blue-600 transition" data-i18n="navAbout">Про мене</a>
+                    <a href="#projects" class="text-slate-600 hover:text-blue-600 transition" data-i18n="navProjects">Проекти</a>
+                    <a href="#experience" class="text-slate-600 hover:text-blue-600 transition" data-i18n="navExperience">Досвід</a>
+                    <a href="#skills" class="text-slate-600 hover:text-blue-600 transition" data-i18n="navSkills">Навички</a>
+                    <a href="#certifications" class="text-slate-600 hover:text-blue-600 transition" data-i18n="navCerts">Сертифікати</a>
+                    <a href="#contact" class="text-slate-600 hover:text-blue-600 transition" data-i18n="navContact">Контакти</a>
+                </div>
+
+                <div class="flex items-center gap-2">
+                    <!-- Кнопка зміни мови -->
+                    <button onclick="toggleLang()" class="no-print inline-flex items-center gap-1.5 bg-slate-100 hover:bg-slate-200 text-slate-700 text-xs font-bold px-3 py-2 rounded-xl transition border border-slate-300">
+                        <i class="fa-solid fa-globe text-blue-600"></i>
+                        <span id="lang-btn-text">EN</span>
+                    </button>
+
+                    <!-- Мобільний вигляд -->
+                    <button onclick="toggleMobileView()" title="Переключити вигляд" class="no-print hidden sm:inline-flex items-center gap-1.5 bg-slate-100 hover:bg-slate-200 text-slate-700 text-xs font-semibold px-3 py-2 rounded-xl transition border border-slate-300">
+                        <i class="fa-solid fa-mobile-screen text-slate-600"></i>
+                    </button>
+
+                    <button onclick="window.print()" class="no-print hidden md:inline-flex items-center gap-2 bg-blue-600 hover:bg-blue-700 text-white text-xs px-3.5 py-2 rounded-xl transition shadow-sm font-medium">
+                        <i class="fa-solid fa-download"></i>
+                        <span data-i18n="navDownload">PDF</span>
+                    </button>
+
+                    <button onclick="toggleMobileMenu()" class="md:hidden text-slate-700 hover:text-blue-600 p-2 text-xl">
+                        <i class="fa-solid fa-bars" id="menu-icon"></i>
+                    </button>
+                </div>
+            </div>
+
+            <!-- Мобільне меню -->
+            <div id="mobile-menu" class="hidden md:hidden pb-4 pt-2 border-t border-slate-100 space-y-2 text-sm font-medium">
+                <a href="#about" onclick="toggleMobileMenu()" class="block px-3 py-2 rounded-lg text-slate-700 hover:bg-blue-50" data-i18n="navAbout">Про мене</a>
+                <a href="#projects" onclick="toggleMobileMenu()" class="block px-3 py-2 rounded-lg text-slate-700 hover:bg-blue-50" data-i18n="navProjects">Проекти</a>
+                <a href="#experience" onclick="toggleMobileMenu()" class="block px-3 py-2 rounded-lg text-slate-700 hover:bg-blue-50" data-i18n="navExperience">Досвід</a>
+                <a href="#skills" onclick="toggleMobileMenu()" class="block px-3 py-2 rounded-lg text-slate-700 hover:bg-blue-50" data-i18n="navSkills">Навички</a>
+                <a href="#certifications" onclick="toggleMobileMenu()" class="block px-3 py-2 rounded-lg text-slate-700 hover:bg-blue-50" data-i18n="navCerts">Сертифікати</a>
+                <a href="#contact" onclick="toggleMobileMenu()" class="block px-3 py-2 rounded-lg text-slate-700 hover:bg-blue-50" data-i18n="navContact">Контакти</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Головна секція -->
+    <section id="about" class="pt-28 pb-16 md:pt-36 md:pb-20">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex flex-col md:flex-row items-center gap-10">
+                <div class="relative group">
+                    <div class="absolute -inset-1 bg-gradient-to-r from-blue-700 to-indigo-600 rounded-2xl blur opacity-25 group-hover:opacity-40 transition"></div>
+                    <div class="relative w-44 h-44 sm:w-52 sm:h-52 rounded-2xl bg-slate-900 text-white flex flex-col items-center justify-center border-4 border-white shadow-xl">
+                        <i class="fa-solid fa-user-shield text-5xl text-blue-400 mb-2"></i>
+                        <span class="text-[10px] sm:text-xs font-semibold uppercase tracking-wider text-slate-300 text-center px-2" data-i18n="avatarLabel">ПЦ & Платіжні системи</span>
+                    </div>
+                </div>
+
+                <div class="flex-1 text-center md:text-left">
+                    <div class="inline-block px-3 py-1 bg-blue-100 text-blue-700 rounded-full text-xs font-semibold uppercase tracking-wider mb-3" data-i18n="heroBadge">
+                        Досвід 18+ років у сфері ІТ та банків
+                    </div>
+                    <h1 class="text-3xl sm:text-5xl font-extrabold text-slate-900 tracking-tight mb-3" data-i18n="heroTitle">
+                        Валерій <span class="gradient-text">Хасанов</span>
+                    </h1>
+                    <p class="text-lg sm:text-xl text-blue-800 font-semibold mb-4" data-i18n="heroSubtitle">
+                        Начальник відділу процесингового центру / Експерт платіжних систем
+                    </p>
+                    <p class="text-slate-600 max-w-2xl leading-relaxed mb-6 text-sm sm:text-base" data-i18n="heroDesc">
+                        Спеціаліст з адміністрування, технічного обслуговування та сертифікації процесингових систем. Досвід розробки та впровадження кобейджингових карток ПРОСТІР – UnionPay, технології захисту PROSTIR e-Secure (EMV 3-D Secure 2.2.0), сертифікації ACS/E-com, тестування EMV, управління термінальними мережами та банкоматами.
+                    </p>
+                    <div class="flex flex-wrap justify-center md:justify-start gap-3">
+                        <a href="#contact" class="bg-slate-900 hover:bg-slate-800 text-white px-5 py-2.5 rounded-xl text-sm font-medium shadow-md transition">
+                            <i class="fa-solid fa-paper-plane mr-2"></i><span data-i18n="btnMessage">Надіслати повідомлення</span>
+                        </a>
+                        <a href="https://linkedin.com" target="_blank" class="bg-blue-50 text-blue-700 hover:bg-blue-100 px-4 py-2.5 rounded-xl text-sm font-medium transition border border-blue-200">
+                            <i class="fa-brands fa-linkedin mr-1.5"></i> LinkedIn
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Метрики -->
+    <section class="py-8 bg-blue-900 text-white">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-6 text-center">
+                <div class="p-4">
+                    <div class="text-2xl sm:text-3xl font-extrabold text-blue-400 mb-1" data-i18n="metric1Val">18+ років</div>
+                    <div class="text-[10px] sm:text-xs uppercase tracking-wider text-slate-300" data-i18n="metric1Lbl">Загальний досвід</div>
+                </div>
+                <div class="p-4">
+                    <div class="text-2xl sm:text-3xl font-extrabold text-blue-400 mb-1" data-i18n="metric2Val">4 МПС</div>
+                    <div class="text-[10px] sm:text-xs uppercase tracking-wider text-slate-300" data-i18n="metric2Lbl">Visa, MC, UnionPay, ПРОСТІР</div>
+                </div>
+                <div class="p-4">
+                    <div class="text-2xl sm:text-3xl font-extrabold text-blue-400 mb-1">PROSTIR e-Secure</div>
+                    <div class="text-[10px] sm:text-xs uppercase tracking-wider text-slate-300">EMV 3-D Secure 2.2.0</div>
+                </div>
+                <div class="p-4">
+                    <div class="text-2xl sm:text-3xl font-extrabold text-blue-400 mb-1">EMV L3 / M-TIP</div>
+                    <div class="text-[10px] sm:text-xs uppercase tracking-wider text-slate-300" data-i18n="metric4Lbl">Тестування та валідація</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Ключові Проекти -->
+    <section id="projects" class="py-16 bg-white border-b border-slate-100">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center gap-3 mb-2">
+                <i class="fa-solid fa-trophy text-2xl text-blue-600"></i>
+                <h2 class="text-2xl sm:text-3xl font-bold text-slate-900" data-i18n="projTitle">Ключові проекти та досягнення</h2>
+            </div>
+            <p class="text-sm sm:text-base text-slate-500 mb-8" data-i18n="projSub">Стратегічні досягнення, кобейджінг та інновації платіжних систем</p>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+                <div class="p-6 bg-slate-50 border border-slate-200 rounded-2xl relative overflow-hidden">
+                    <div class="w-10 h-10 bg-blue-100 text-blue-600 rounded-xl flex items-center justify-center mb-4 text-lg"><i class="fa-solid fa-credit-card"></i></div>
+                    <h3 class="font-bold text-slate-900 text-base sm:text-lg mb-2" data-i18n="proj1T">Кобейджінг ПРОСТІР – UnionPay</h3>
+                    <p class="text-xs sm:text-sm text-slate-600 leading-relaxed" data-i18n="proj1D">Розробка, технічне супроводження та розгортання спільної кобейджінгової картки <strong>"ПРОСТІР – UnionPay International"</strong> для міжнародного та національного еквайрингу.</p>
+                </div>
+                <div class="p-6 bg-slate-50 border border-slate-200 rounded-2xl relative overflow-hidden">
+                    <div class="w-10 h-10 bg-blue-100 text-blue-600 rounded-xl flex items-center justify-center mb-4 text-lg"><i class="fa-solid fa-shield-cat"></i></div>
+                    <h3 class="font-bold text-slate-900 text-base sm:text-lg mb-2" data-i18n="proj2T">Технологія PROSTIR e-Secure</h3>
+                    <p class="text-xs sm:text-sm text-slate-600 leading-relaxed" data-i18n="proj2D">Впровадження безпечної технології онлайн-розрахунків <strong>PROSTIR e-Secure</strong> на базі сучасного протоколу <strong>EMV 3-D Secure 2.2.0</strong>.</p>
+                </div>
+                <div class="p-6 bg-slate-50 border border-slate-200 rounded-2xl relative overflow-hidden">
+                    <div class="w-10 h-10 bg-blue-100 text-blue-600 rounded-xl flex items-center justify-center mb-4 text-lg"><i class="fa-solid fa-right-left"></i></div>
+                    <h3 class="font-bold text-slate-900 text-base sm:text-lg mb-2" data-i18n="proj3T">Міграція процесингу</h3>
+                    <p class="text-xs sm:text-sm text-slate-600 leading-relaxed" data-i18n="proj3D">Участь у складних проектах міграції процесингових систем: безперебійний перехід з <strong>Base24 на SmartVista</strong> та міграція обладнання з <strong>HP NonStop S78 на NS230</strong>.</p>
+                </div>
+                <div class="p-6 bg-slate-50 border border-slate-200 rounded-2xl relative overflow-hidden">
+                    <div class="w-10 h-10 bg-blue-100 text-blue-600 rounded-xl flex items-center justify-center mb-4 text-lg"><i class="fa-solid fa-shield-halved"></i></div>
+                    <h3 class="font-bold text-slate-900 text-base sm:text-lg mb-2" data-i18n="proj4T">Впровадження ACS & 3DS</h3>
+                    <p class="text-xs sm:text-sm text-slate-600 leading-relaxed" data-i18n="proj4D">Повний цикл підготовки, тестування та успішної сертифікації модулів Access Control Server (ACS) і E-commerce у платіжних системах Visa, MasterCard та ПРОСТІР.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Досвід -->
+    <section id="experience" class="py-16 bg-slate-50">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center gap-3 mb-2">
+                <i class="fa-solid fa-clock-rotate-left text-2xl text-blue-600"></i>
+                <h2 class="text-2xl sm:text-3xl font-bold text-slate-900" data-i18n="expTitle">Досвід роботи</h2>
+            </div>
+            <p class="text-sm sm:text-base text-slate-500 mb-10" data-i18n="expSub">Професійний шлях та реалізовані завдання</p>
+
+            <div class="space-y-8 relative before:absolute before:inset-0 before:left-4 md:before:left-1/2 before:-ml-px before:w-0.5 before:bg-slate-200">
+                
+                <!-- Робота 1 -->
+                <div class="relative flex flex-col md:flex-row items-center justify-between group">
+                    <div class="flex items-center w-full md:w-1/2 md:pr-8 mb-4 md:mb-0">
+                        <div class="w-full glass-card p-5 sm:p-6 rounded-2xl shadow-sm border border-slate-200">
+                            <div class="flex justify-between items-start mb-2">
+                                <span class="text-[10px] sm:text-xs font-semibold text-blue-700 bg-blue-100 px-3 py-1 rounded-full" data-i18n="job1Date">11.2020 — Дотепер</span>
+                                <span class="text-[10px] sm:text-xs font-medium text-slate-500" data-i18n="job1Cat">ІТ / Банки</span>
+                            </div>
+                            <h3 class="text-base sm:text-lg font-bold text-slate-900" data-i18n="job1Role">Начальник відділу процесингового центру</h3>
+                            <p class="text-xs sm:text-sm font-semibold text-blue-600 mb-3" data-i18n="job1Comp">УкрКарт, АО</p>
+                            <ul class="list-disc list-inside text-xs sm:text-sm text-slate-600 space-y-1.5 leading-relaxed">
+                                <li data-i18n="job1Li1">Технічне обслуговування та адміністрування систем процесингового центру.</li>
+                                <li data-i18n="job1Li2">Тестування нових, оновлених модулів системи та їх установка.</li>
+                                <li data-i18n="job1Li3">Робота та тестування кобейджингових карток МПС Visa, MasterCard, UnionPay та НПС ПРОСТІР.</li>
+                                <li data-i18n="job1Li4">Підтримка протоколу EMV 3DS 2.2.0, сертифікація ACS, ECOMGATE у Visa, MasterCard,PROSTIR.</li>
+                                <li data-i18n="job1Li5">Успішне проходження сертифікацій Visa ADVT | CDET | L3 та MasterCard M-TIP L3.</li>
+                                <li data-i18n="job1Li6">Підготовка документації конфігурації та експлуатації ПО.</li>
+                                <li><strong><span data-i18n="softwareTxt">ПЗ:</span></strong> SmartVista, EPG, ACS, Симулятори Visa/MasterCard, UL, Collis, Elasticsearch.</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="absolute left-4 md:left-1/2 -translate-x-1/2 w-4 h-4 bg-blue-600 rounded-full border-4 border-white shadow"></div>
+                    <div class="w-full md:w-1/2 md:pl-8"></div>
+                </div>
+
+                <!-- Робота 2 -->
+                <div class="relative flex flex-col md:flex-row items-center justify-between group">
+                    <div class="w-full md:w-1/2 md:pr-8"></div>
+                    <div class="absolute left-4 md:left-1/2 -translate-x-1/2 w-4 h-4 bg-blue-600 rounded-full border-4 border-white shadow"></div>
+                    <div class="flex items-center w-full md:w-1/2 md:pl-8 mb-4 md:mb-0">
+                        <div class="w-full glass-card p-5 sm:p-6 rounded-2xl shadow-sm border border-slate-200">
+                            <div class="flex justify-between items-start mb-2">
+                                <span class="text-[10px] sm:text-xs font-semibold text-blue-700 bg-blue-100 px-3 py-1 rounded-full">08.2019 — 11.2020</span>
+                                <span class="text-[10px] sm:text-xs font-medium text-slate-500" data-i18n="job2Cat">Банківський сектор</span>
+                            </div>
+                            <h3 class="text-base sm:text-lg font-bold text-slate-900" data-i18n="job2Role">Старший інженер департаменту платіжних систем НПС ПРОСТІР</h3>
+                            <p class="text-xs sm:text-sm font-semibold text-blue-600 mb-3" data-i18n="job2Comp">Національний банк України</p>
+                            <ul class="list-disc list-inside text-xs sm:text-sm text-slate-600 space-y-1.5 leading-relaxed">
+                                <li data-i18n="job2Li1">Розробка та впровадження кобейджингової картки "ПРОСТІР – UnionPay International".</li>
+                                <li data-i18n="job2Li3">Взаємодія з банками щодо емісії карток, розгортання технологій та сервісів.</li>
+                                <li data-i18n="job2Li4">Проходження сертифікацій та тестування оновлених модулів.</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Робота 3 -->
+                <div class="relative flex flex-col md:flex-row items-center justify-between group">
+                    <div class="flex items-center w-full md:w-1/2 md:pr-8 mb-4 md:mb-0">
+                        <div class="w-full glass-card p-5 sm:p-6 rounded-2xl shadow-sm border border-slate-200">
+                            <div class="flex justify-between items-start mb-2">
+                                <span class="text-[10px] sm:text-xs font-semibold text-blue-700 bg-blue-100 px-3 py-1 rounded-full">01.2011 — 05.2019</span>
+                                <span class="text-[10px] sm:text-xs font-medium text-slate-500" data-i18n="job3Cat">Послуги для бізнесу</span>
+                            </div>
+                            <h3 class="text-base sm:text-lg font-bold text-slate-900" data-i18n="job3Role">Начальник відділу експлуатації процесингового центру</h3>
+                            <p class="text-xs sm:text-sm font-semibold text-blue-600 mb-3" data-i18n="job1Comp">УкрКарт, АО</p>
+                            <ul class="list-disc list-inside text-xs sm:text-sm text-slate-600 space-y-1.5 leading-relaxed">
+                                <li data-i18n="job3Li1">Тестування ПЗ терміналів INGENICO, SAGEM, VERIFONE та банкоматів NCR, WINCOR, DIEBOLD.</li>
+                                <li data-i18n="job3Li2">Створення сценаріїв для банкоматів, моніторинг/аналіз термінальної мережі.</li>
+                                <li data-i18n="job3Li3">Написання запитів і процедур SQL для формування звітності.</li>
+                                <li data-i18n="job3Li4">Вирішення спірних транзакцій, проведення внутрішніх розслідувань.</li>
+                                <li data-i18n="job3Li5">Міграція HP NonStop S78 на NS230 та Base24 на SmartVista.</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="absolute left-4 md:left-1/2 -translate-x-1/2 w-4 h-4 bg-blue-600 rounded-full border-4 border-white shadow"></div>
+                    <div class="w-full md:w-1/2 md:pl-8"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Навички -->
+    <section id="skills" class="py-16 bg-white">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center gap-3 mb-2">
+                <i class="fa-solid fa-gears text-2xl text-blue-600"></i>
+                <h2 class="text-2xl sm:text-3xl font-bold text-slate-900" data-i18n="skTitle">Навички та компетенції</h2>
+            </div>
+            <p class="text-sm sm:text-base text-slate-500 mb-10" data-i18n="skSub">Професійна експертиза та програмні комплекси</p>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+                <!-- Блок 1 -->
+                <div class="bg-slate-50 p-6 rounded-2xl border border-slate-200">
+                    <div class="w-10 h-10 bg-blue-100 text-blue-600 rounded-xl flex items-center justify-center mb-4"><i class="fa-solid fa-credit-card"></i></div>
+                    <h3 class="font-bold text-slate-900 mb-3 text-base sm:text-lg" data-i18n="skB1T">Процесинг & МПС</h3>
+                    <ul class="text-xs sm:text-sm text-slate-600 space-y-2">
+                        <li class="flex items-center gap-2"><i class="fa-solid fa-check text-blue-600"></i> Visa, MC, UnionPay, ПРОСТІР</li>
+                        <li class="flex items-center gap-2"><i class="fa-solid fa-check text-blue-600"></i> ПРОСТІР – UnionPay Co-badging</li>
+                        <li class="flex items-center gap-2"><i class="fa-solid fa-check text-blue-600"></i> PROSTIR e-Secure (3DS 2.2.0)</li>
+                        <li class="flex items-center gap-2"><i class="fa-solid fa-check text-blue-600"></i> <span data-i18n="skB1L4">Сертифікація ACS / E-com</span></li>
+                        <li class="flex items-center gap-2"><i class="fa-solid fa-check text-blue-600"></i> Visa ADVT/CDET/L3, MC M-TIP L3</li>
+                    </ul>
+                </div>
+                <!-- Блок 2 -->
+                <div class="bg-slate-50 p-6 rounded-2xl border border-slate-200">
+                    <div class="w-10 h-10 bg-indigo-100 text-indigo-600 rounded-xl flex items-center justify-center mb-4"><i class="fa-solid fa-terminal"></i></div>
+                    <h3 class="font-bold text-slate-900 mb-3 text-base sm:text-lg" data-i18n="skB2T">Термінали & ATM</h3>
+                    <ul class="text-xs sm:text-sm text-slate-600 space-y-2">
+                        <li class="flex items-center gap-2"><i class="fa-solid fa-check text-indigo-600"></i> POS: Ingenico, Verifone</li>
+                        <li class="flex items-center gap-2"><i class="fa-solid fa-check text-indigo-600"></i> ATM: NCR, Diebold, Wincor</li>
+                        <li class="flex items-center gap-2"><i class="fa-solid fa-check text-indigo-600"></i> NDC, DDC, REST API, ISO 8583</li>
+                        <li class="flex items-center gap-2"><i class="fa-solid fa-check text-indigo-600"></i> <span data-i18n="skB2L4">Сценарії для банкоматів</span></li>
+                        <li class="flex items-center gap-2"><i class="fa-solid fa-check text-indigo-600"></i> <span data-i18n="skB2L5">Аналіз логфайлів</span></li>
+                    </ul>
+                </div>
+                <!-- Блок 3 -->
+                <div class="bg-slate-50 p-6 rounded-2xl border border-slate-200">
+                    <div class="w-10 h-10 bg-emerald-100 text-emerald-600 rounded-xl flex items-center justify-center mb-4"><i class="fa-solid fa-database"></i></div>
+                    <h3 class="font-bold text-slate-900 mb-3 text-base sm:text-lg" data-i18n="skB3T">ПЗ & Бази Даних</h3>
+                    <div class="flex flex-wrap gap-1.5">
+                        <span class="px-2.5 py-1 bg-white border border-slate-200 text-slate-700 text-xs font-semibold rounded-md">SmartVista</span>
+                        <span class="px-2.5 py-1 bg-white border border-slate-200 text-slate-700 text-xs font-semibold rounded-md">Base24</span>
+                        <span class="px-2.5 py-1 bg-white border border-slate-200 text-slate-700 text-xs font-semibold rounded-md">Way4</span>
+                        <span class="px-2.5 py-1 bg-white border border-slate-200 text-slate-700 text-xs font-semibold rounded-md">Oracle SQL</span>
+                        <span class="px-2.5 py-1 bg-white border border-slate-200 text-slate-700 text-xs font-semibold rounded-md">PostgreSQL</span>
+                        <span class="px-2.5 py-1 bg-white border border-slate-200 text-slate-700 text-xs font-semibold rounded-md">Elasticsearch</span>
+                        <span class="px-2.5 py-1 bg-white border border-slate-200 text-slate-700 text-xs font-semibold rounded-md">Zabbix / Postman</span>
+                    </div>
+                </div>
+                <!-- Блок 4 -->
+                <div class="bg-slate-50 p-6 rounded-2xl border border-slate-200">
+                    <div class="w-10 h-10 bg-amber-100 text-amber-600 rounded-xl flex items-center justify-center mb-4"><i class="fa-solid fa-users"></i></div>
+                    <h3 class="font-bold text-slate-900 mb-3 text-base sm:text-lg" data-i18n="skB4T">Soft Skills & Управління</h3>
+                    <ul class="text-xs sm:text-sm text-slate-600 space-y-2">
+                        <li class="flex items-center gap-2"><i class="fa-solid fa-check text-amber-600"></i> <span data-i18n="skB4L1">Керівництво підрозділом</span></li>
+                        <li class="flex items-center gap-2"><i class="fa-solid fa-check text-amber-600"></i> <span data-i18n="skB4L2">Навчання команди</span></li>
+                        <li class="flex items-center gap-2"><i class="fa-solid fa-check text-amber-600"></i> <span data-i18n="skB4L3">Вирішення інцидентів</span></li>
+                        <li class="flex items-center gap-2"><i class="fa-solid fa-check text-amber-600"></i> <span data-i18n="skB4L4">Внутрішні розслідування</span></li>
+                        <li class="flex items-center gap-2"><i class="fa-solid fa-check text-amber-600"></i> <span data-i18n="skB4L5">Технічна документація</span></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Освіта та мови -->
+    <section id="education" class="py-16 bg-slate-50">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <div>
+                    <div class="flex items-center gap-3 mb-6">
+                        <i class="fa-solid fa-graduation-cap text-2xl text-blue-600"></i>
+                        <h2 class="text-2xl font-bold text-slate-900" data-i18n="eduTitle">Освіта</h2>
+                    </div>
+                    <div class="bg-white p-6 rounded-2xl border border-slate-200">
+                        <span class="text-xs font-semibold text-blue-600 bg-blue-50 px-2.5 py-1 rounded-md" data-i18n="eduLvl">Вища • 2009</span>
+                        <h3 class="text-base sm:text-lg font-bold text-slate-900 mt-3" data-i18n="eduUni">Національна Академія керівних кадрів культури і мистецтв</h3>
+                        <p class="text-xs sm:text-sm font-medium text-slate-600 mt-1"><span data-i18n="eduSpec">Спеціальність:</span> Менеджмент</p>
+                        <p class="text-xs sm:text-sm text-slate-500"><span data-i18n="eduQual">Кваліфікація:</span> <span data-i18n="eduQualV">Менеджер-економіст (м. Київ)</span></p>
+                    </div>
+                </div>
+                <div>
+                    <div class="flex items-center gap-3 mb-6">
+                        <i class="fa-solid fa-language text-2xl text-blue-600"></i>
+                        <h2 class="text-2xl font-bold text-slate-900" data-i18n="langTitle">Володіння мовами</h2>
+                    </div>
+                    <div class="bg-white p-6 rounded-2xl border border-slate-200 space-y-4">
+                        <div>
+                            <div class="flex justify-between text-xs sm:text-sm font-medium mb-1">
+                                <span class="text-slate-800" data-i18n="langUa">Українська</span>
+                                <span class="text-blue-600 font-semibold" data-i18n="langUaLvl">Рідна</span>
+                            </div>
+                            <div class="w-full bg-slate-200 h-2 rounded-full overflow-hidden"><div class="bg-blue-600 h-full rounded-full" style="width: 100%"></div></div>
+                        </div>
+                        <div>
+                            <div class="flex justify-between text-xs sm:text-sm font-medium mb-1">
+                                <span class="text-slate-800" data-i18n="langEn">Англійська</span>
+                                <span class="text-blue-600 font-semibold" data-i18n="langEnLvl">Середній (Intermediate)</span>
+                            </div>
+                            <div class="w-full bg-slate-200 h-2 rounded-full overflow-hidden"><div class="bg-blue-600 h-full rounded-full" style="width: 65%"></div></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Сертифікати та бейджи -->
+    <section id="certifications" class="py-16 bg-white border-t border-slate-100">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center gap-3 mb-2">
+                <i class="fa-solid fa-award text-2xl text-blue-600"></i>
+                <h2 class="text-2xl sm:text-3xl font-bold text-slate-900" data-i18n="certTitle">Сертифікати та бейджи</h2>
+            </div>
+            <p class="text-sm sm:text-base text-slate-500 mb-10" data-i18n="certSub">Офіційно верифіковані сертифікації</p>
+
+            <div class="flex flex-wrap gap-6 justify-center md:justify-start items-center p-6 bg-slate-50 rounded-2xl border border-slate-200">
+                
+                <!-- Бейдж Credly 1 -->
+                <div class="bg-white p-4 rounded-xl shadow-sm border border-slate-200 hover:shadow-md transition">
+                    <div data-iframe-width="150" data-iframe-height="270" data-share-badge-id="1352bc11-4eca-443c-a92d-dd340af2e731" data-share-badge-host="https://www.credly.com"></div>
+                </div>
+
+                <!-- Бейдж Credly 2 -->
+                <div class="bg-white p-4 rounded-xl shadow-sm border border-slate-200 hover:shadow-md transition">
+                    <div data-iframe-width="150" data-iframe-height="270" data-share-badge-id="ee4a59b5-8aa0-45e2-b8cf-b165e6b554a0" data-share-badge-host="https://www.credly.com"></div>
+                </div>
+
+                <!-- Бейдж Google Skills (Кастомна картка в розмірі Credly) -->
+                <a href="https://www.skills.google/public_profiles/9df7faf8-9ae1-4652-b130-bc47e3aaa928/badges/5256971" target="_blank" rel="noopener" class="bg-white p-4 rounded-xl shadow-sm border border-slate-200 hover:border-blue-400 hover:shadow-md transition group google-badge-card">
+                    <div class="w-16 h-16 flex items-center justify-center bg-slate-50 rounded-full mb-3 border border-slate-100">
+                        <!-- Google "G" SVG -->
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="32" height="32">
+                            <path fill="#4285F4" d="M23.745 12.27c0-.79-.07-1.54-.19-2.27h-11.3v4.51h6.47c-.29 1.48-1.14 2.73-2.4 3.58v3h3.86c2.26-2.09 3.56-5.17 3.56-8.82z"/>
+                            <path fill="#34A853" d="M12.255 24c3.24 0 5.95-1.08 7.93-2.91l-3.86-3c-1.08.72-2.45 1.16-4.07 1.16-3.13 0-5.78-2.11-6.73-4.96h-3.98v3.09C3.515 21.3 7.565 24 12.255 24z"/>
+                            <path fill="#FBBC05" d="M5.525 14.29c-.25-.72-.38-1.49-.38-2.29s.14-1.57.38-2.29V6.62h-3.98a11.86 11.86 0 000 11.36l3.98-3.69z"/>
+                            <path fill="#EA4335" d="M12.255 4.75c1.77 0 3.35.61 4.6 1.8l3.42-3.42C18.205 1.19 15.495 0 12.255 0 7.565 0 3.515 2.7 1.545 6.62l3.98 3.09c.95-2.85 3.6-4.96 6.73-4.96z"/>
+                        </svg>
+                    </div>
+                    <h3 class="text-sm font-bold text-slate-800 leading-tight mb-2 group-hover:text-blue-600 transition">Google IT Support</h3>
+                    <p class="text-[10px] text-slate-500 font-medium bg-slate-100 px-2 py-1 rounded-full mb-auto" data-i18n="googCert">Certificate</p>
+                    <div class="mt-4 w-full text-[10px] text-blue-600 font-semibold border-t border-slate-100 pt-3 flex items-center justify-center gap-1">
+                        <span data-i18n="googBtn">Verify on Google</span> <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                    </div>
+                </a>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Контакти -->
+    <section id="contact" class="py-16 bg-slate-900 text-white">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-12">
+                <div>
+                    <h2 class="text-2xl sm:text-3xl font-bold mb-4" data-i18n="contTitle">Зв'язатися зі мною</h2>
+                    <p class="text-sm sm:text-base text-slate-400 mb-8 leading-relaxed" data-i18n="contSub">Відкритий до обговорення нових вакансій, проектів та професійних можливостей у сфері процесингу та платіжних систем.</p>
+                    <div class="space-y-4">
+                        <div class="flex items-center gap-4">
+                            <div class="w-12 h-12 bg-slate-800 rounded-xl flex items-center justify-center text-blue-400"><i class="fa-solid fa-user text-lg"></i></div>
+                            <div>
+                                <p class="text-xs text-slate-400" data-i18n="contNameLbl">ПІБ</p>
+                                <p class="font-medium text-sm sm:text-base" data-i18n="contName">Валерій Хасанов</p>
+                            </div>
+                        </div>
+                        <div class="flex items-center gap-4">
+                            <div class="w-12 h-12 bg-slate-800 rounded-xl flex items-center justify-center text-blue-400"><i class="fa-solid fa-briefcase text-lg"></i></div>
+                            <div>
+                                <p class="text-xs text-slate-400" data-i18n="contRoleLbl">Бажана посада</p>
+                                <p class="font-medium text-sm sm:text-base" data-i18n="contRole">Начальник відділу ПЦ / Експерт</p>
+                            </div>
+                        </div>
+                        <div class="flex items-center gap-4">
+                            <div class="w-12 h-12 bg-slate-800 rounded-xl flex items-center justify-center text-blue-400"><i class="fa-solid fa-location-dot text-lg"></i></div>
+                            <div>
+                                <p class="text-xs text-slate-400" data-i18n="contLocLbl">Локація</p>
+                                <p class="font-medium text-sm sm:text-base" data-i18n="contLoc">Київ, Україна</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Форма -->
+                <div class="bg-slate-800/80 p-6 sm:p-8 rounded-2xl border border-slate-700">
+                    <form onsubmit="handleFormSubmit(event)" class="space-y-4">
+                        <div>
+                            <label class="block text-sm font-medium text-slate-300 mb-1" id="formL1">Ваше ім'я</label>
+                            <input type="text" required class="w-full bg-slate-900 border border-slate-700 rounded-xl px-4 py-3 text-white placeholder-slate-500 focus:outline-none focus:border-blue-500 text-sm" placeholder="HR Manager">
+                        </div>
+                        <div>
+                            <label class="block text-sm font-medium text-slate-300 mb-1" id="formL2">Контакт</label>
+                            <input type="text" required class="w-full bg-slate-900 border border-slate-700 rounded-xl px-4 py-3 text-white placeholder-slate-500 focus:outline-none focus:border-blue-500 text-sm" placeholder="contact@company.com">
+                        </div>
+                        <div>
+                            <label class="block text-sm font-medium text-slate-300 mb-1" id="formL3">Повідомлення</label>
+                            <textarea rows="4" required class="w-full bg-slate-900 border border-slate-700 rounded-xl px-4 py-3 text-white placeholder-slate-500 focus:outline-none focus:border-blue-500 text-sm" placeholder="..."></textarea>
+                        </div>
+                        <button type="submit" class="w-full bg-blue-600 hover:bg-blue-700 text-white font-medium py-3 rounded-xl transition text-sm">
+                            <span data-i18n="formBtn">Надіслати</span>
+                        </button>
+                    </form>
+                    <div id="form-message" class="hidden mt-4 p-3 bg-emerald-500/20 border border-emerald-500/50 text-emerald-300 text-sm rounded-xl text-center" data-i18n="formOk">
+                        Дякую! Повідомлення відправлено.
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Футер -->
+    <footer class="py-6 bg-slate-950 border-t border-slate-800 text-center text-xs sm:text-sm text-slate-500">
+        <p data-i18n="footer">© 2026 Валерій Хасанов. Всі права захищені.</p>
+    </footer>
+
+    <!-- Скрипти: I18n Переклад, Форма та UI -->
+    <script>
+        // Словник перекладу
+        const dict = {
+            uk: {
+                nameLogo: "Валерій <span class='text-blue-600'>Хасанов</span>",
+                navAbout: "Про мене", navProjects: "Проекти", navExperience: "Досвід", navSkills: "Навички", navCerts: "Сертифікати", navContact: "Контакти", navDownload: "PDF",
+                avatarLabel: "ПЦ & Платіжні системи",
+                heroBadge: "Досвід 18+ років у сфері ІТ та банків",
+                heroTitle: "Валерій <span class='gradient-text'>Хасанов</span>",
+                heroSubtitle: "Начальник відділу процесингового центру / Експерт платіжних систем",
+                heroDesc: "Спеціаліст з адміністрування, технічного обслуговування та сертифікації процесингових систем. Досвід розробки та впровадження кобейджингових карток ПРОСТІР – UnionPay, технології захисту PROSTIR e-Secure (EMV 3-D Secure 2.2.0), сертифікації ACS/E-com, тестування EMV, управління термінальними мережами та банкоматами.",
+                btnMessage: "Надіслати повідомлення",
+                metric1Val: "18+ років", metric1Lbl: "Загальний досвід", metric2Val: "4 МПС", metric2Lbl: "Visa, MC, UnionPay, ПРОСТІР", metric4Lbl: "Тестування та валідація",
+                projTitle: "Ключові проекти та досягнення", projSub: "Стратегічні досягнення, кобейджінг та інновації платіжних систем",
+                proj1T: "Кобейджінг ПРОСТІР – UnionPay", proj1D: "Розробка, технічне супроводження та розгортання спільної кобейджінгової картки <strong>\"ПРОСТІР – UnionPay International\"</strong> для міжнародного та національного еквайрингу.",
+                proj2T: "Технологія PROSTIR e-Secure", proj2D: "Впровадження безпечної технології онлайн-розрахунків <strong>PROSTIR e-Secure</strong> на базі сучасного протоколу <strong>EMV 3-D Secure 2.2.0</strong>.",
+                proj3T: "Міграція процесингу", proj3D: "Участь у складних проектах міграції процесингових систем: безперебійний перехід з <strong>Base24 на SmartVista</strong> та міграція обладнання з <strong>HP NonStop S78 на NS230</strong>.",
+                proj4T: "Впровадження ACS & 3DS", proj4D: "Повний цикл підготовки, тестування та успішної сертифікації модулів Access Control Server (ACS) і E-commerce у платіжних системах Visa, MasterCard та ПРОСТІР.",
+                expTitle: "Досвід роботи", expSub: "Професійний шлях та реалізовані завдання",
+                job1Date: "11.2020 — Дотепер", job1Cat: "ІТ / Банки", job1Role: "Начальник відділу процесингового центру", job1Comp: "УкрКарт, АО",
+                job1Li1: "Технічне обслуговування та адміністрування систем процесингового центру.",
+                job1Li2: "Тестування нових, оновлених модулів системи та їх установка.",
+                job1Li3: "Робота та тестування кобейджингових карток МПС Visa, MasterCard, UnionPay та НПС ПРОСТІР.",
+                job1Li4: "Підтримка протоколу PROSTIR e-Secure (EMV 3DS 2.2.0), сертифікація ACS, E-com у Visa, MasterCard.",
+                job1Li5: "Успішне проходження сертифікацій Visa ADVT | CDET | L3 та MasterCard M-TIP.",
+                job1Li6: "Підготовка документації конфігурації та експлуатації ПО.",
+                softwareTxt: "ПЗ:",
+                job2Cat: "Банківський сектор", job2Role: "Старший інженер департаменту платіжних систем НПС ПРОСТІР", job2Comp: "Національний банк України",
+                job2Li1: "Розробка та впровадження кобейджингової картки \"ПРОСТІР – UnionPay International\".",
+                job2Li2: "Впровадження безпечних онлайн-транзакцій \"PROSTIR e-Secure\" (EMV 3-D Secure 2.2.0).",
+                job2Li3: "Взаємодія з банками щодо емісії карток, розгортання технологій та сервісів.",
+                job2Li4: "Проходження сертифікацій та тестування оновлених модулів.",
+                job3Cat: "Послуги для бізнесу", job3Role: "Начальник відділу експлуатації процесингового центру",
+                job3Li1: "Тестування ПЗ терміналів INGENICO, SAGEM, VERIFONE та банкоматів NCR, WINCOR, DIEBOLD.",
+                job3Li2: "Створення сценаріїв для банкоматів, моніторинг/аналіз термінальної мережі.",
+                job3Li3: "Написання запитів і процедур SQL для формування звітності.",
+                job3Li4: "Вирішення спірних транзакцій, проведення внутрішніх розслідувань.",
+                job3Li5: "Міграція HP NonStop S78 на NS230 та Base24 на SmartVista.",
+                skTitle: "Навички та компетенції", skSub: "Професійна експертиза та програмні комплекси",
+                skB1T: "Процесинг & МПС", skB1L4: "Сертифікація ACS / E-com", skB2T: "Термінали & ATM", skB2L4: "Сценарії для банкоматів", skB2L5: "Аналіз логфайлів",
+                skB3T: "ПЗ & Бази Даних", skB4T: "Soft Skills & Управління", skB4L1: "Керівництво підрозділом", skB4L2: "Навчання команди", skB4L3: "Вирішення інцидентів", skB4L4: "Внутрішні розслідування", skB4L5: "Технічна документація",
+                eduTitle: "Освіта", eduLvl: "Вища • 2009", eduUni: "Національна Академія керівних кадрів культури і мистецтв", eduSpec: "Спеціальність:", eduQual: "Кваліфікація:", eduQualV: "Менеджер-економіст (м. Київ)",
+                langTitle: "Володіння мовами", langUa: "Українська", langUaLvl: "Рідна", langEn: "Англійська", langEnLvl: "Середній (Intermediate)",
+                certTitle: "Сертифікати та бейджи", certSub: "Офіційно верифіковані сертифікації", googCert: "Сертифікат", googBtn: "Перевірити Google",
+                contTitle: "Зв'язатися зі мною", contSub: "Відкритий до обговорення нових вакансій, проектів та професійних можливостей у сфері процесингу та платіжних систем.",
+                contNameLbl: "ПІБ", contName: "Валерій Хасанов", contRoleLbl: "Бажана посада", contRole: "Начальник відділу ПЦ / Експерт", contLocLbl: "Локація", contLoc: "Київ, Україна",
+                formL1: "Ваше ім'я", formL2: "Контакт", formL3: "Повідомлення", formBtn: "Надіслати", formOk: "Дякую! Повідомлення відправлено.",
+                footer: "© 2026 Валерій Хасанов. Всі права захищені."
+            },
+            en: {
+                nameLogo: "Valeriy <span class='text-blue-600'>Khasanov</span>",
+                navAbout: "About", navProjects: "Projects", navExperience: "Experience", navSkills: "Skills", navCerts: "Certifications", navContact: "Contact", navDownload: "PDF",
+                avatarLabel: "PC & Payment Systems",
+                heroBadge: "18+ years of IT & Banking Experience",
+                heroTitle: "Valerii <span class='gradient-text'>Khasanov</span>",
+                heroSubtitle: "Head of Processing Center / Payment Systems Expert",
+                heroDesc: "Specialist in administration, maintenance, and certification of processing systems. Experience in the development and implementation of PROSTIR – UnionPay co-badged cards, PROSTIR e-Secure (EMV 3-D Secure 2.2.0) security technology, ACS/E-com certification, EMV testing, and ATM/POS terminal network management.",
+                btnMessage: "Send Message",
+                metric1Val: "18+ years", metric1Lbl: "Total Experience", metric2Val: "4 IPS", metric2Lbl: "Visa, MC, UnionPay, PROSTIR", metric4Lbl: "Testing & Validation",
+                projTitle: "Key Projects & Achievements", projSub: "Strategic achievements, co-badging, and payment system innovations",
+                proj1T: "PROSTIR – UnionPay Co-badging", proj1D: "Development, technical support, and deployment of the joint co-badged card <strong>\"PROSTIR – UnionPay International\"</strong> for international and domestic acquiring.",
+                proj2T: "PROSTIR e-Secure Technology", proj2D: "Implementation of secure online transaction technology <strong>PROSTIR e-Secure</strong> based on the modern <strong>EMV 3-D Secure 2.2.0</strong> protocol.",
+                proj3T: "Processing Migration", proj3D: "Participation in complex processing system migration projects: seamless transition from <strong>Base24 to SmartVista</strong> and hardware migration from <strong>HP NonStop S78 to NS230</strong>.",
+                proj4T: "ACS & 3DS Implementation", proj4D: "Full cycle of preparation, testing, and successful certification of Access Control Server (ACS) and E-commerce modules in Visa, MasterCard, and PROSTIR payment systems.",
+                expTitle: "Work Experience", expSub: "Professional path and implemented tasks",
+                job1Date: "11.2020 — Present", job1Cat: "IT / Banking", job1Role: "Head of Processing Center Department", job1Comp: "UkrKart, JSC",
+                job1Li1: "Technical maintenance and administration of processing center systems.",
+                job1Li2: "Testing and installation of new and updated system modules.",
+                job1Li3: "Operation and testing of co-badged and emission payment cards for Visa, MasterCard, UnionPay, and PROSTIR.",
+                job1Li4: "Support of the PROSTIR e-Secure (EMV 3DS 2.2.0) protocol, ACS, and E-com certification with Visa and MasterCard.",
+                job1Li5: "Successful passing of Visa ADVT | CDET | L3 and MasterCard M-TIP certifications.",
+                job1Li6: "Preparation of configuration and operation documentation for software users.",
+                softwareTxt: "Software:",
+                job2Cat: "Banking Sector", job2Role: "Senior Engineer, Payment Systems Department PROSTIR", job2Comp: "National Bank of Ukraine",
+                job2Li1: "Development and implementation of the co-badged payment card \"PROSTIR – UnionPay International\".",
+                job2Li2: "Implementation of secure online transactions \"PROSTIR e-Secure\" (EMV 3-D Secure 2.2.0).",
+                job2Li3: "Interaction with banks regarding card emission, technology deployment, and new services.",
+                job2Li4: "Passing certifications and testing new/updated modules.",
+                job3Cat: "Business Services", job3Role: "Head of Processing Center Operations",
+                job3Li1: "Software testing for INGENICO, SAGEM, VERIFONE terminals and NCR, WINCOR, DIEBOLD ATMs.",
+                job3Li2: "Creating scenarios for ATMs, monitoring/analysis of the terminal network.",
+                job3Li3: "Writing SQL queries and procedures for reporting.",
+                job3Li4: "Resolving disputed transactions, conducting internal investigations.",
+                job3Li5: "Migration of HP NonStop S78 to NS230 and Base24 to SmartVista.",
+                skTitle: "Skills and Competencies", skSub: "Professional expertise and software stacks",
+                skB1T: "Processing & IPS", skB1L4: "ACS / E-com Certification", skB2T: "Terminals & ATM", skB2L4: "ATM Scenarios", skB2L5: "Logfile Analysis",
+                skB3T: "Software & Databases", skB4T: "Soft Skills & Management", skB4L1: "Department Leadership", skB4L2: "Team Training", skB4L3: "Incident Resolution", skB4L4: "Internal Investigations", skB4L5: "Technical Documentation",
+                eduTitle: "Education", eduLvl: "Higher • 2009", eduUni: "National Academy of Culture and Arts Management", eduSpec: "Specialty:", eduQual: "Qualification:", eduQualV: "Manager-Economist (Kyiv)",
+                langTitle: "Languages", langUa: "Ukrainian", langUaLvl: "Native", langEn: "English", langEnLvl: "Intermediate",
+                certTitle: "Certifications and Badges", certSub: "Officially verified international qualifications", googCert: "Certificate", googBtn: "Verify Profile",
+                contTitle: "Contact Me", contSub: "Open to discussing new vacancies, projects, and professional opportunities in processing and payment systems.",
+                contNameLbl: "Full Name", contName: "Valeriy Khasanov", contRoleLbl: "Desired Position", contRole: "Head of PC / Expert", contLocLbl: "Location", contLoc: "Kyiv, Ukraine",
+                formL1: "Your Name", formL2: "Contact (Email/Phone)", formL3: "Message", formBtn: "Send Message", formOk: "Thank you! Message sent successfully.",
+                footer: "© 2026 Valeriy Khasanov. All rights reserved."
+            }
+        };
+
+        let currentLang = 'uk';
+
+        function toggleLang() {
+            currentLang = currentLang === 'uk' ? 'en' : 'uk';
+            document.getElementById('lang-btn-text').innerText = currentLang === 'uk' ? 'EN' : 'UK';
+            document.documentElement.lang = currentLang;
+            
+            // Заміна текстів у елементах з атрибутом data-i18n
+            document.querySelectorAll('[data-i18n]').forEach(el => {
+                const key = el.getAttribute('data-i18n');
+                if (dict[currentLang][key]) {
+                    el.innerHTML = dict[currentLang][key];
+                }
+            });
+
+            // Форма (лейбли)
+            document.getElementById('formL1').innerText = dict[currentLang].formL1;
+            document.getElementById('formL2').innerText = dict[currentLang].formL2;
+            document.getElementById('formL3').innerText = dict[currentLang].formL3;
+        }
+
+        function handleFormSubmit(e) {
+            e.preventDefault();
+            const msg = document.getElementById('form-message');
+            msg.classList.remove('hidden');
+            e.target.reset();
+            setTimeout(() => { msg.classList.add('hidden'); }, 4000);
+        }
+
+        function toggleMobileMenu() {
+            const menu = document.getElementById('mobile-menu');
+            const icon = document.getElementById('menu-icon');
+            menu.classList.toggle('hidden');
+            icon.className = menu.classList.contains('hidden') ? 'fa-solid fa-bars' : 'fa-solid fa-xmark';
+        }
+
+        function toggleMobileView() {
+            document.getElementById('main-body').classList.toggle('mobile-simulated');
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        }
+    </script>
+</body>
+</html>
+
