@@ -64,7 +64,7 @@
 
                 <div class="flex items-center gap-2">
                     <!-- Кнопка зміни мови -->
-                    <button onclick="toggleLang()" class="no-print inline-flex items-center gap-1.5 bg-slate-100 hover:bg-slate-200 text-slate-700 text-xs font-bold px-3 py-2 rounded-xl transition border border-slate-300">
+                    <button onclick="toggleLang()" class="no-print inline-flex items-center gap-1 bg-slate-100 hover:bg-slate-200 text-slate-700 text-xs font-bold px-2.5 py-2 rounded-xl transition border border-slate-300">
                         <i class="fa-solid fa-globe text-blue-600"></i>
                         <span id="lang-btn-text">EN</span>
                     </button>
@@ -84,14 +84,14 @@
 
             <!-- Мобільне меню -->
             <div id="mobile-menu" class="hidden md:hidden pb-4 pt-2 border-t border-slate-100 space-y-1 text-base font-medium">
-                <a href="#about" onclick="closeMobileMenu()" class="block px-3 py-2 rounded-xl text-slate-700 hover:bg-blue-50 active:bg-blue-100" data-i18n="navAbout">Про мене</a>
-                <a href="#projects" onclick="closeMobileMenu()" class="block px-3 py-2 rounded-xl text-slate-700 hover:bg-blue-50 active:bg-blue-100" data-i18n="navProjects">Проекти</a>
-                <a href="#experience" onclick="closeMobileMenu()" class="block px-3 py-2 rounded-xl text-slate-700 hover:bg-blue-50 active:bg-blue-100" data-i18n="navExperience">Досвід</a>
-                <a href="#skills" onclick="closeMobileMenu()" class="block px-3 py-2 rounded-xl text-slate-700 hover:bg-blue-50 active:bg-blue-100" data-i18n="navSkills">Навички</a>
-                <a href="#certifications" onclick="closeMobileMenu()" class="block px-3 py-2 rounded-xl text-slate-700 hover:bg-blue-50 active:bg-blue-100" data-i18n="navCerts">Сертифікати</a>
-                <a href="#contact" onclick="closeMobileMenu()" class="block px-3 py-2 rounded-xl text-slate-700 hover:bg-blue-50 active:bg-blue-100" data-i18n="navContact">Контакти</a>
-                <div class="pt-2 border-t border-slate-100">
-                    <button onclick="window.print()" class="w-full bg-blue-600 text-white text-sm py-2 rounded-xl font-medium text-center">
+                <a href="#about" onclick="closeMobileMenu()" class="block px-3 py-2.5 rounded-xl text-slate-700 hover:bg-blue-50 active:bg-blue-100" data-i18n="navAbout">Про мене</a>
+                <a href="#projects" onclick="closeMobileMenu()" class="block px-3 py-2.5 rounded-xl text-slate-700 hover:bg-blue-50 active:bg-blue-100" data-i18n="navProjects">Проекти</a>
+                <a href="#experience" onclick="closeMobileMenu()" class="block px-3 py-2.5 rounded-xl text-slate-700 hover:bg-blue-50 active:bg-blue-100" data-i18n="navExperience">Досвід</a>
+                <a href="#skills" onclick="closeMobileMenu()" class="block px-3 py-2.5 rounded-xl text-slate-700 hover:bg-blue-50 active:bg-blue-100" data-i18n="navSkills">Навички</a>
+                <a href="#certifications" onclick="closeMobileMenu()" class="block px-3 py-2.5 rounded-xl text-slate-700 hover:bg-blue-50 active:bg-blue-100" data-i18n="navCerts">Сертифікати</a>
+                <a href="#contact" onclick="closeMobileMenu()" class="block px-3 py-2.5 rounded-xl text-slate-700 hover:bg-blue-50 active:bg-blue-100" data-i18n="navContact">Контакти</a>
+                <div class="pt-2 border-t border-slate-100 flex gap-2">
+                    <button onclick="window.print()" class="w-full bg-blue-600 text-white text-sm py-2.5 rounded-xl font-medium text-center">
                         <i class="fa-solid fa-download mr-1"></i> <span data-i18n="navDownload">Завантажити PDF</span>
                     </button>
                 </div>
@@ -122,7 +122,7 @@
                         Начальник відділу процесингового центру / Експерт платіжних систем
                     </p>
                     <p class="text-slate-600 max-w-2xl leading-relaxed mb-6 text-xs sm:text-base text-justify md:text-left" data-i18n="heroDesc">
-                        Спеціаліст з адміністрування, технічного обслуговування та сертифікації процесингових систем. Досвід розробки та впровадження кобейджингових карток ПРОСТІР – UnionPay, технології захисту PROSTIR e-Secure (EMV 3-D Secure 2.2.0), сертифікації ACS/E-com, тестування EMV, управління термінальними мережами та банкоматами.
+                        Спеціаліст з адміністрування та сертифікації процесингових систем. Досвід впровадження карток ПРОСТІР – UnionPay, технології EMV 3-D Secure 2.2.0, сертифікації Хоста/ACS/EcomGate, аналізу логів (Elasticsearch/Kibana), а також автоматизації рутинних задач за допомогою Python та ШІ (AI-Assisted Development).
                     </p>
                     <div class="flex flex-wrap justify-center md:justify-start gap-2.5 sm:gap-3">
                         <a href="#contact" class="bg-slate-900 hover:bg-slate-800 text-white px-4 sm:px-5 py-2.5 rounded-xl text-xs sm:text-sm font-medium shadow-md transition">
@@ -159,7 +159,7 @@
                     <div class="text-[10px] sm:text-xs uppercase font-semibold tracking-wider text-slate-300" data-i18n="metric3Lbl">SECURITY PROTOCOL</div>
                 </div>
                 <div class="p-3 sm:p-4 bg-blue-950/40 rounded-xl border border-blue-800/50">
-                    <div class="text-xl sm:text-3xl font-extrabold text-blue-400 mb-1">EMV L3 / M-TIP</div>
+                    <div class="text-xl sm:text-3xl font-extrabold text-blue-400 mb-1">Visa EMV L3 / Mastercard M-TIP L3</div>
                     <div class="text-[10px] sm:text-xs uppercase font-semibold tracking-wider text-slate-300" data-i18n="metric4Lbl">TESTING & VALIDATION</div>
                 </div>
             </div>
@@ -173,28 +173,38 @@
                 <i class="fa-solid fa-trophy text-xl sm:text-2xl text-blue-600"></i>
                 <h2 class="text-2xl sm:text-3xl font-bold text-slate-900" data-i18n="projTitle">Ключові проекти та досягнення</h2>
             </div>
-            <p class="text-xs sm:text-base text-slate-500 mb-8" data-i18n="projSub">Стратегічні досягнення, кобейджінг та інновації платіжних систем</p>
+            <p class="text-xs sm:text-base text-slate-500 mb-8" data-i18n="projSub">Стратегічні досягнення, автоматизація та інновації платіжних систем</p>
 
-            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6">
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6">
+                <!-- Проект 1 -->
                 <div class="p-5 sm:p-6 bg-slate-50 border border-slate-200 rounded-2xl relative overflow-hidden">
                     <div class="w-10 h-10 bg-blue-100 text-blue-600 rounded-xl flex items-center justify-center mb-4 text-lg"><i class="fa-solid fa-credit-card"></i></div>
                     <h3 class="font-bold text-slate-900 text-base mb-2" data-i18n="proj1T">Кобейджінг ПРОСТІР – UnionPay</h3>
                     <p class="text-xs sm:text-sm text-slate-600 leading-relaxed" data-i18n="proj1D">Розробка, технічне супроводження та розгортання спільної кобейджінгової картки <strong>"ПРОСТІР – UnionPay International"</strong> для міжнародного та національного еквайрингу.</p>
                 </div>
+                <!-- Проект 2 -->
+                <div class="p-5 sm:p-6 bg-slate-50 border border-slate-200 rounded-2xl relative overflow-hidden">
+                    <div class="w-10 h-10 bg-blue-100 text-blue-600 rounded-xl flex items-center justify-center mb-4 text-lg"><i class="fa-solid fa-robot"></i></div>
+                    <h3 class="font-bold text-slate-900 text-base mb-2" data-i18n="proj5T">AI Автоматизація & Python</h3>
+                    <p class="text-xs sm:text-sm text-slate-600 leading-relaxed" data-i18n="proj5D">Застосування ШІ для розробки Python-інструментів автоматизованого тестування, Telegram-ботів моніторингу та стандартизації чек-листів для операторів.</p>
+                </div>
+                <!-- Проект 3 -->
+                <div class="p-5 sm:p-6 bg-slate-50 border border-slate-200 rounded-2xl relative overflow-hidden">
+                    <div class="w-10 h-10 bg-blue-100 text-blue-600 rounded-xl flex items-center justify-center mb-4 text-lg"><i class="fa-solid fa-chart-line"></i></div>
+                    <h3 class="font-bold text-slate-900 text-base mb-2" data-i18n="proj2T">Elasticsearch, Логи & Алертинг</h3>
+                    <p class="text-xs sm:text-sm text-slate-600 leading-relaxed" data-i18n="proj2D">Впровадження аналізу транзакційних логів через <strong>Elasticsearch / Kibana</strong>, створення дашбордів моніторингу та системи алертингу для швидкого реагування на збої.</p>
+                </div>
+                <!-- Проект 4 -->
                 <div class="p-5 sm:p-6 bg-slate-50 border border-slate-200 rounded-2xl relative overflow-hidden">
                     <div class="w-10 h-10 bg-blue-100 text-blue-600 rounded-xl flex items-center justify-center mb-4 text-lg"><i class="fa-solid fa-shield-cat"></i></div>
-                    <h3 class="font-bold text-slate-900 text-base mb-2" data-i18n="proj2T">Технологія PROSTIR e-Secure</h3>
-                    <p class="text-xs sm:text-sm text-slate-600 leading-relaxed" data-i18n="proj2D">Впровадження безпечної технології онлайн-розрахунків <strong>PROSTIR e-Secure</strong> на базі сучасного протоколу <strong>EMV 3-D Secure 2.2.0</strong>.</p>
+                    <h3 class="font-bold text-slate-900 text-base mb-2" data-i18n="proj4T">Технологія PROSTIR e-Secure</h3>
+                    <p class="text-xs sm:text-sm text-slate-600 leading-relaxed" data-i18n="proj4D">Впровадження безпечної технології онлайн-розрахунків PROSTIR e-Secure та сертифікація модулів ACS і E-commerce (EMV 3DS 2.2.0) у системах Visa, MasterCard, ПРОСТІР.</p>
                 </div>
+                <!-- Проект 5 -->
                 <div class="p-5 sm:p-6 bg-slate-50 border border-slate-200 rounded-2xl relative overflow-hidden">
                     <div class="w-10 h-10 bg-blue-100 text-blue-600 rounded-xl flex items-center justify-center mb-4 text-lg"><i class="fa-solid fa-right-left"></i></div>
                     <h3 class="font-bold text-slate-900 text-base mb-2" data-i18n="proj3T">Міграція процесингу</h3>
                     <p class="text-xs sm:text-sm text-slate-600 leading-relaxed" data-i18n="proj3D">Участь у складних проектах міграції процесингових систем: безперебійний перехід з <strong>Base24 на SmartVista</strong> та міграція обладнання з <strong>HP NonStop S78 на NS230</strong>.</p>
-                </div>
-                <div class="p-5 sm:p-6 bg-slate-50 border border-slate-200 rounded-2xl relative overflow-hidden">
-                    <div class="w-10 h-10 bg-blue-100 text-blue-600 rounded-xl flex items-center justify-center mb-4 text-lg"><i class="fa-solid fa-shield-halved"></i></div>
-                    <h3 class="font-bold text-slate-900 text-base mb-2" data-i18n="proj4T">Впровадження ACS & 3DS</h3>
-                    <p class="text-xs sm:text-sm text-slate-600 leading-relaxed" data-i18n="proj4D">Повний цикл підготовки, тестування та успішної сертифікації модулів Access Control Server (ACS) і E-commerce у платіжних системах Visa, MasterCard та ПРОСТІР.</p>
                 </div>
             </div>
         </div>
@@ -223,12 +233,13 @@
                             <p class="text-xs sm:text-sm font-semibold text-blue-600 mb-3" data-i18n="job1Comp">УкрКарт, АО</p>
                             <ul class="list-disc list-inside text-xs sm:text-sm text-slate-600 space-y-1.5 leading-relaxed">
                                 <li data-i18n="job1Li1">Технічне обслуговування та адміністрування систем процесингового центру.</li>
-                                <li data-i18n="job1Li2">Тестування нових, оновлених модулів системи та їх установка.</li>
+                                <li data-i18n="job1Li7">Використання ШІ (AI-Assisted Development) та Python для створення скриптів автоматизованого тестування ПЗ.</li>
+                                <li data-i18n="job1Li8">Розробка Telegram-ботів та генерація інтерактивних чек-листів для оперативної підтримки чергової зміни.</li>
+                                <li data-i18n="job1Li2">Аналіз та агрегація транзакційних логфайлів у <strong>Elasticsearch / Kibana</strong>, створення операційних дашбордів.</li>
                                 <li data-i18n="job1Li3">Робота та тестування кобейджингових карток МПС Visa, MasterCard, UnionPay та НПС ПРОСТІР.</li>
-                                <li data-i18n="job1Li4">Підтримка протоколу PROSTIR e-Secure (EMV 3DS 2.2.0), сертифікація ACS, E-com у Visa, MasterCard.</li>
+                                <li data-i18n="job1Li4">Підтримка протоколу EMV 3DS 2.2.0, сертифікація ACS, EcomGate у Visa, MasterCard.</li>
                                 <li data-i18n="job1Li5">Успішне проходження сертифікацій Visa ADVT | CDET | L3 та MasterCard M-TIP L3.</li>
-                                <li data-i18n="job1Li6">Підготовка документації конфігурації та експлуатації ПО.</li>
-                                <li><strong><span data-i18n="softwareTxt">ПЗ:</span></strong> SmartVista, EPG, ACS, Симулятори Visa/MasterCard, UL, Collis, Elasticsearch.</li>
+                                <li><strong><span data-i18n="softwareTxt">ПЗ, AI & Моніторинг:</span></strong> Python, Prompt Eng., SmartVista, EPG, ACS, Elasticsearch, Kibana, Zabbix.</li>
                             </ul>
                         </div>
                     </div>
@@ -272,7 +283,7 @@
                                 <li data-i18n="job3Li1">Тестування ПЗ терміналів INGENICO, SAGEM, VERIFONE та банкоматів NCR, WINCOR, DIEBOLD.</li>
                                 <li data-i18n="job3Li2">Створення сценаріїв для банкоматів, моніторинг/аналіз термінальної мережі.</li>
                                 <li data-i18n="job3Li3">Написання запитів і процедур SQL для формування звітності.</li>
-                                <li data-i18n="job3Li4">Вирішення спірних транзакцій, проведення внутрішніх розслідувань.</li>
+                                <li data-i18n="job3Li4">Вирішення спірних транзакцій за логфайлами, проведення внутрішніх розслідувань.</li>
                                 <li data-i18n="job3Li5">Міграція HP NonStop S78 на NS230 та Base24 на SmartVista.</li>
                             </ul>
                         </div>
@@ -323,9 +334,9 @@
                     <ul class="text-xs sm:text-sm text-slate-600 space-y-2">
                         <li class="flex items-center gap-2"><i class="fa-solid fa-check text-blue-600"></i> Visa, MC, UnionPay, ПРОСТІР</li>
                         <li class="flex items-center gap-2"><i class="fa-solid fa-check text-blue-600"></i> ПРОСТІР – UnionPay Co-badging</li>
-                        <li class="flex items-center gap-2"><i class="fa-solid fa-check text-blue-600"></i> PROSTIR e-Secure (3DS 2.2.0)</li>
-                        <li class="flex items-center gap-2"><i class="fa-solid fa-check text-blue-600"></i> <span data-i18n="skB1L4">Сертифікація ACS / E-com</span></li>
-                        <li class="flex items-center gap-2"><i class="fa-solid fa-check text-blue-600"></i> Visa ADVT/CDET/L3, MC M-TIP</li>
+                        <li class="flex items-center gap-2"><i class="fa-solid fa-check text-blue-600"></i> EMV 3DS 2.2.0 </li>
+                        <li class="flex items-center gap-2"><i class="fa-solid fa-check text-blue-600"></i> <span data-i18n="skB1L4">Сертифікація ACS / EcomGate / 3DS Server</span></li>
+                        <li class="flex items-center gap-2"><i class="fa-solid fa-check text-blue-600"></i> Visa ADVT/CDET/L3, MC M-TIP L3</li>
                     </ul>
                 </div>
                 <!-- Блок 2 -->
@@ -342,16 +353,18 @@
                 </div>
                 <!-- Блок 3 -->
                 <div class="bg-slate-50 p-5 sm:p-6 rounded-2xl border border-slate-200">
-                    <div class="w-10 h-10 bg-emerald-100 text-emerald-600 rounded-xl flex items-center justify-center mb-4"><i class="fa-solid fa-database"></i></div>
-                    <h3 class="font-bold text-slate-900 mb-3 text-base" data-i18n="skB3T">ПЗ & Бази Даних</h3>
+                    <div class="w-10 h-10 bg-emerald-100 text-emerald-600 rounded-xl flex items-center justify-center mb-4"><i class="fa-solid fa-code"></i></div>
+                    <h3 class="font-bold text-slate-900 mb-3 text-base" data-i18n="skB3T">ПЗ, AI та Аналітика</h3>
                     <div class="flex flex-wrap gap-1.5">
+                        <span class="px-2.5 py-1 bg-white border border-slate-200 text-slate-700 text-xs font-semibold rounded-md">Python</span>
+                        <span class="px-2.5 py-1 bg-white border border-slate-200 text-slate-700 text-xs font-semibold rounded-md">AI / Prompt Eng.</span>
+                        <span class="px-2.5 py-1 bg-white border border-slate-200 text-slate-700 text-xs font-semibold rounded-md">Telegram Bots API</span>
+                        <span class="px-2.5 py-1 bg-white border border-slate-200 text-slate-700 text-xs font-semibold rounded-md">Elasticsearch</span>
+                        <span class="px-2.5 py-1 bg-white border border-slate-200 text-slate-700 text-xs font-semibold rounded-md">Kibana Dashboards</span>
                         <span class="px-2.5 py-1 bg-white border border-slate-200 text-slate-700 text-xs font-semibold rounded-md">SmartVista</span>
                         <span class="px-2.5 py-1 bg-white border border-slate-200 text-slate-700 text-xs font-semibold rounded-md">Base24</span>
                         <span class="px-2.5 py-1 bg-white border border-slate-200 text-slate-700 text-xs font-semibold rounded-md">Way4</span>
                         <span class="px-2.5 py-1 bg-white border border-slate-200 text-slate-700 text-xs font-semibold rounded-md">Oracle SQL</span>
-                        <span class="px-2.5 py-1 bg-white border border-slate-200 text-slate-700 text-xs font-semibold rounded-md">PostgreSQL</span>
-                        <span class="px-2.5 py-1 bg-white border border-slate-200 text-slate-700 text-xs font-semibold rounded-md">Elasticsearch</span>
-                        <span class="px-2.5 py-1 bg-white border border-slate-200 text-slate-700 text-xs font-semibold rounded-md">Zabbix / Postman</span>
                     </div>
                 </div>
                 <!-- Блок 4 -->
@@ -478,7 +491,7 @@
                             </div>
                             <div>
                                 <p class="text-xs text-slate-400">Telegram</p>
-                                <p class="font-medium text-xs sm:text-base group-hover:text-sky-400 transition">@Mr_Valerii</p>
+                                <p class="font-medium text-xs sm:text-base group-hover:text-sky-400 transition">@mrvaleriikh</p>
                             </div>
                         </a>
 
@@ -545,23 +558,26 @@
                 heroBadge: "Досвід 18+ років у сфері ІТ та банків",
                 heroTitle: "Валерій <span class='gradient-text'>Хасанов</span>",
                 heroSubtitle: "Начальник відділу процесингового центру / Експерт платіжних систем",
-                heroDesc: "Спеціаліст з адміністрування, технічного обслуговування та сертифікації процесингових систем. Досвід розробки та впровадження кобейджингових карток ПРОСТІР – UnionPay, технології захисту PROSTIR e-Secure (EMV 3-D Secure 2.2.0), сертифікації ACS/E-com, тестування EMV, управління термінальними мережами та банкоматами.",
+                heroDesc: "Спеціаліст з адміністрування та сертифікації процесингових систем. Досвід впровадження карток ПРОСТІР – UnionPay, технології EMV 3-D Secure 2.2.0, сертифікації ACS\EcomGate\3DS-Server, аналізу логів (Elasticsearch/Kibana), а також автоматизації рутинних задач за допомогою Python та ШІ (AI-Assisted Development).",
                 btnMessage: "Надіслати повідомлення",
                 metric1Val: "18+ років", metric1Lbl: "TOTAL EXPERIENCE", metric2Val: "4 МПС", metric2Lbl: "VISA, MC, UNIONPAY, PROSTIR", metric3Lbl: "SECURITY PROTOCOL", metric4Lbl: "TESTING & VALIDATION",
-                projTitle: "Ключові проекти та досягнення", projSub: "Стратегічні досягнення, кобейджінг та інновації платіжних систем",
+                projTitle: "Ключові проекти та досягнення", projSub: "Стратегічні досягнення, автоматизація та інновації платіжних систем",
                 proj1T: "Кобейджінг ПРОСТІР – UnionPay", proj1D: "Розробка, технічне супроводження та розгортання спільної кобейджінгової картки <strong>\"ПРОСТІР – UnionPay International\"</strong> для міжнародного та національного еквайрингу.",
-                proj2T: "Технологія PROSTIR e-Secure", proj2D: "Впровадження безпечної технології онлайн-розрахунків <strong>PROSTIR e-Secure</strong> на базі сучасного протоколу <strong>EMV 3-D Secure 2.2.0</strong>.",
+                proj5T: "AI Автоматизація & Python", proj5D: "Застосування ШІ для розробки Python-інструментів автоматизованого тестування, Telegram-ботів моніторингу та стандартизації чек-листів для операторів.",
+                proj2T: "Elasticsearch, Логи & Алертинг", proj2D: "Впровадження аналізу транзакційних логів через <strong>Elasticsearch / Kibana</strong>, створення дашбордів моніторингу та системи алертингу для швидкого реагування на збої.",
+                proj4T: "Технологія PROSTIR e-Secure", proj4D: "Впровадження безпечної технології онлайн-розрахунків PROSTIR e-Secure та сертифікація модулів ACS і E-commerce (EMV 3DS 2.2.0) у системах Visa, MasterCard, ПРОСТІР.",
                 proj3T: "Міграція процесингу", proj3D: "Участь у складних проектах міграції процесингових систем: безперебійний перехід з <strong>Base24 на SmartVista</strong> та міграція обладнання з <strong>HP NonStop S78 на NS230</strong>.",
-                proj4T: "Впровадження ACS & 3DS", proj4D: "Повний цикл підготовки, тестування та успішної сертифікації модулів Access Control Server (ACS) і E-commerce у платіжних системах Visa, MasterCard та ПРОСТІР.",
                 expTitle: "Досвід роботи", expSub: "Професійний шлях та реалізовані завдання",
                 job1Date: "11.2020 — Дотепер", job1Cat: "ІТ / Банки", job1Role: "Начальник відділу процесингового центру", job1Comp: "УкрКарт, АО",
                 job1Li1: "Технічне обслуговування та адміністрування систем процесингового центру.",
-                job1Li2: "Тестування нових, оновлених модулів системи та їх установка.",
+                job1Li7: "Використання ШІ (AI-Assisted Development) та Python для створення скриптів автоматизованого тестування ПЗ.",
+                job1Li8: "Розробка Telegram-ботів та генерація інтерактивних чек-листів для оперативної підтримки чергової зміни.",
+                job1Li2: "Аналіз та агрегація транзакційних логфайлів у <strong>Elasticsearch / Kibana</strong>, створення операційних дашбордів.",
                 job1Li3: "Робота та тестування кобейджингових карток МПС Visa, MasterCard, UnionPay та НПС ПРОСТІР.",
                 job1Li4: "Підтримка протоколу PROSTIR e-Secure (EMV 3DS 2.2.0), сертифікація ACS, E-com у Visa, MasterCard.",
-                job1Li5: "Успішне проходження сертифікацій Visa ADVT | CDET | L3 та MasterCard M-TIP.",
+                job1Li5: "Успішне проходження сертифікацій Visa ADVT | CDET | L3 та MasterCard M-TIP L3.",
                 job1Li6: "Підготовка документації конфігурації та експлуатації ПО.",
-                softwareTxt: "ПЗ:",
+                softwareTxt: "ПЗ, AI & Моніторинг:",
                 job2Cat: "Банківський сектор", job2Role: "Старший інженер департаменту платіжних систем НПС ПРОСТІР", job2Comp: "Національний банк України",
                 job2Li1: "Розробка та впровадження кобейджингової картки \"ПРОСТІР – UnionPay International\".",
                 job2Li2: "Впровадження безпечних онлайн-транзакцій \"PROSTIR e-Secure\" (EMV 3-D Secure 2.2.0).",
@@ -571,7 +587,7 @@
                 job3Li1: "Тестування ПЗ терміналів INGENICO, SAGEM, VERIFONE та банкоматів NCR, WINCOR, DIEBOLD.",
                 job3Li2: "Створення сценаріїв для банкоматів, моніторинг/аналіз термінальної мережі.",
                 job3Li3: "Написання запитів і процедур SQL для формування звітності.",
-                job3Li4: "Вирішення спірних транзакцій, проведення внутрішніх розслідувань.",
+                job3Li4: "Вирішення спірних транзакцій за логфайлами, проведення внутрішніх розслідувань.",
                 job3Li5: "Міграція HP NonStop S78 на NS230 та Base24 на SmartVista.",
                 job4Cat: "Торгівля / Дистрибуція", job4Role: "Старший продавець",
                 job4Li1: "Контроль та координація роботи продавців на робочих місцях.",
@@ -579,7 +595,7 @@
                 job4Li3: "Планування робочого часу та постановка завдань для підвищення ефективності.",
                 skTitle: "Навички та компетенції", skSub: "Професійна експертиза та програмні комплекси",
                 skB1T: "Процесинг & МПС", skB1L4: "Сертифікація ACS / E-com", skB2T: "Термінали & ATM", skB2L4: "Сценарії для банкоматів", skB2L5: "Аналіз логфайлів",
-                skB3T: "ПЗ & Бази Даних", skB4T: "Soft Skills & Управління", skB4L1: "Керівництво підрозділом", skB4L2: "Навчання команди", skB4L3: "Вирішення інцидентів", skB4L4: "Внутрішні розслідування", skB4L5: "Технічна документація",
+                skB3T: "ПЗ, AI та Аналітика", skB4T: "Soft Skills & Управління", skB4L1: "Керівництво підрозділом", skB4L2: "Навчання команди", skB4L3: "Вирішення інцидентів", skB4L4: "Внутрішні розслідування", skB4L5: "Технічна документація",
                 eduTitle: "Освіта", eduLvl: "Вища • 2009", eduUni: "Національна Академія керівних кадрів культури і мистецтв", eduSpec: "Спеціальність:", eduQual: "Кваліфікація:", eduQualV: "Менеджер-економіст (м. Київ)",
                 langTitle: "Володіння мовами", langUa: "Українська", langUaLvl: "Рідна", langEn: "Англійська", langEnLvl: "Середній (Intermediate)",
                 certTitle: "Сертифікати та бейджи", certSub: "Офіційно верифіковані сертифікації", googCert: "Сертифікат", googBtn: "Перевірити Google",
@@ -595,23 +611,26 @@
                 heroBadge: "18+ years of IT & Banking Experience",
                 heroTitle: "Valerii <span class='gradient-text'>Khasanov</span>",
                 heroSubtitle: "Head of Processing Center / Payment Systems Expert",
-                heroDesc: "Specialist in administration, maintenance, and certification of processing systems. Experience in the development and implementation of PROSTIR – UnionPay co-badged cards, PROSTIR e-Secure (EMV 3-D Secure 2.2.0) security technology, ACS/E-com certification, EMV testing, and ATM/POS terminal network management.",
+                heroDesc: "Specialist in administration and certification of processing systems. Experience in PROSTIR – UnionPay co-badging, PROSTIR e-Secure (EMV 3-D Secure 2.2.0), ACS/E-com certification, log analysis (Elasticsearch/Kibana), and automating routine operational tasks using Python and AI-Assisted Development.",
                 btnMessage: "Send Message",
                 metric1Val: "18+ years", metric1Lbl: "TOTAL EXPERIENCE", metric2Val: "4 IPS", metric2Lbl: "VISA, MC, UNIONPAY, PROSTIR", metric3Lbl: "SECURITY PROTOCOL", metric4Lbl: "TESTING & VALIDATION",
-                projTitle: "Key Projects & Achievements", projSub: "Strategic achievements, co-badging, and payment system innovations",
+                projTitle: "Key Projects & Achievements", projSub: "Strategic achievements, automation, and payment system innovations",
                 proj1T: "PROSTIR – UnionPay Co-badging", proj1D: "Development, technical support, and deployment of the joint co-badged card <strong>\"PROSTIR – UnionPay International\"</strong> for international and domestic acquiring.",
-                proj2T: "PROSTIR e-Secure Technology", proj2D: "Implementation of secure online transaction technology <strong>PROSTIR e-Secure</strong> based on the modern <strong>EMV 3-D Secure 2.2.0</strong> protocol.",
+                proj5T: "AI Automation & Python", proj5D: "Applying AI to develop Python tools for automated software testing, monitoring Telegram bots, and standardizing operational checklists.",
+                proj2T: "Elasticsearch, Logs & Alerting", proj2D: "Implementation of transaction log analysis via <strong>Elasticsearch / Kibana</strong>, building real-time monitoring dashboards and automated alerting systems.",
+                proj4T: "PROSTIR e-Secure Technology", proj4D: "Implementation of secure online transactions via PROSTIR e-Secure and certification of ACS / E-commerce modules (EMV 3DS 2.2.0) in Visa, MasterCard, and PROSTIR systems.",
                 proj3T: "Processing Migration", proj3D: "Participation in complex processing system migration projects: seamless transition from <strong>Base24 to SmartVista</strong> and hardware migration from <strong>HP NonStop S78 to NS230</strong>.",
-                proj4T: "ACS & 3DS Implementation", proj4D: "Full cycle of preparation, testing, and successful certification of Access Control Server (ACS) and E-commerce modules in Visa, MasterCard, and PROSTIR payment systems.",
                 expTitle: "Work Experience", expSub: "Professional path and implemented tasks",
                 job1Date: "11.2020 — Present", job1Cat: "IT / Banking", job1Role: "Head of Processing Center Department", job1Comp: "UkrKart, JSC",
                 job1Li1: "Technical maintenance and administration of processing center systems.",
-                job1Li2: "Testing and installation of new and updated system modules.",
+                job1Li7: "Using AI-Assisted Development and Python to create automated software testing scripts.",
+                job1Li8: "Development of Telegram bots and generation of interactive checklists for duty shift support.",
+                job1Li2: "Analysis and aggregation of transaction logfiles in <strong>Elasticsearch / Kibana</strong>, creating operational dashboards.",
                 job1Li3: "Operation and testing of co-badged and emission payment cards for Visa, MasterCard, UnionPay, and PROSTIR.",
                 job1Li4: "Support of the PROSTIR e-Secure (EMV 3DS 2.2.0) protocol, ACS, and E-com certification with Visa and MasterCard.",
                 job1Li5: "Successful passing of Visa ADVT | CDET | L3 and MasterCard M-TIP L3 certifications.",
                 job1Li6: "Preparation of configuration and operation documentation for software users.",
-                softwareTxt: "Software:",
+                softwareTxt: "Software, AI & Monitoring:",
                 job2Cat: "Banking Sector", job2Role: "Senior Engineer, Payment Systems Department PROSTIR", job2Comp: "National Bank of Ukraine",
                 job2Li1: "Development and implementation of the co-badged payment card \"PROSTIR – UnionPay International\".",
                 job2Li2: "Implementation of secure online transactions \"PROSTIR e-Secure\" (EMV 3-D Secure 2.2.0).",
@@ -621,7 +640,7 @@
                 job3Li1: "Software testing for INGENICO, SAGEM, VERIFONE terminals and NCR, WINCOR, DIEBOLD ATMs.",
                 job3Li2: "Creating scenarios for ATMs, monitoring/analysis of the terminal network.",
                 job3Li3: "Writing SQL queries and procedures for reporting.",
-                job3Li4: "Resolving disputed transactions, conducting internal investigations.",
+                job3Li4: "Resolving disputed transactions via logfiles, conducting internal investigations.",
                 job3Li5: "Migration of HP NonStop S78 to NS230 and Base24 to SmartVista.",
                 job4Cat: "Retail / Distribution", job4Role: "Senior Sales Representative",
                 job4Li1: "Control and coordination of sales staff at workplaces.",
@@ -629,7 +648,7 @@
                 job4Li3: "Work schedule planning and setting tasks to boost overall team efficiency.",
                 skTitle: "Skills and Competencies", skSub: "Professional expertise and software stacks",
                 skB1T: "Processing & IPS", skB1L4: "ACS / E-com Certification", skB2T: "Terminals & ATM", skB2L4: "ATM Scenarios", skB2L5: "Logfile Analysis",
-                skB3T: "Software & Databases", skB4T: "Soft Skills & Management", skB4L1: "Department Leadership", skB4L2: "Team Training", skB4L3: "Incident Resolution", skB4L4: "Internal Investigations", skB4L5: "Technical Documentation",
+                skB3T: "Software, AI & Analytics", skB4T: "Soft Skills & Management", skB4L1: "Department Leadership", skB4L2: "Team Training", skB4L3: "Incident Resolution", skB4L4: "Internal Investigations", skB4L5: "Technical Documentation",
                 eduTitle: "Education", eduLvl: "Higher • 2009", eduUni: "National Academy of Culture and Arts Management", eduSpec: "Specialty:", eduQual: "Qualification:", eduQualV: "Manager-Economist (Kyiv)",
                 langTitle: "Languages", langUa: "Ukrainian", langUaLvl: "Native", langEn: "English", langEnLvl: "Intermediate",
                 certTitle: "Certifications and Badges", certSub: "Officially verified international qualifications", googCert: "Certificate", googBtn: "Verify Profile",
@@ -689,3 +708,4 @@
     </script>
 </body>
 </html>
+
